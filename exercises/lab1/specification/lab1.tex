@@ -103,11 +103,11 @@ Always launch {\tt MATLAB} from the directory {\tt 5dv005ht18}. This ensures tha
     using single/double precision and ascending/descending order, a total of 4 different calculations.
   \item Edit {\tt my\_l1p3} so that compute the error associated with each value of $s$. An exceedingly accurate value of the true sum $s$ can be obtained using double precision and the function {\tt kahan\_sum}.
   \item Copy function {\tt simple\_sum} to {\tt lab1/work/my\_simple\_sum}.
-  \item Edit {\tt my\_simple\_sum} to include the computation of a number $\mu$, such that
+  \item Edit {\tt my\_simple\_sum} to include the computation of a running error bound $E_b$, such that
     \bes
-    |s - \hat{s}| \leq \mu u
+    |s - \hat{s}| \leq E_b, \quad  E_b = \mu u
     \ees
-    where $s$ is the true value of the sum, $\hat{s}$ is computed value of $s$ and $u$ is the unit roundoff. The upper bound, i.e., the term $\mu u$ is called an running error bound, because it is computed concurrently with $s$.
+    where $s$ is the true value of the sum, $\hat{s}$ is computed value of $s$ and $u$ is the unit roundoff. Be mindful of the fact that $u = 2^{-24}$ in single precision and $u = 2^{-53}$ in double precision.
   \item Edit {\tt my\_l1p3} so that it displays the running error bound right next to the actual error.
   \item Verify that the absolute value of the error is bounded by the running error bound.
   \item Which order of summation is the most accurate?
