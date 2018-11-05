@@ -1,6 +1,6 @@
 function [y, flag]=simple_sum(a,n,precision,direction)
 
-% SIMPLE_SUM Sums terms in ascending or descending order
+% SIMPLE_SUM Sums terms in ascending/descending order of magnitude
 %
 % Simple summation routine which computes the sum
 %
@@ -19,8 +19,8 @@ function [y, flag]=simple_sum(a,n,precision,direction)
 %               'single'    for single precision
 %               'double'    for double precision
 %   direction  there are two options:
-%              'ascend'   the terms are summed smallests terms first
-%              'descend': the terms are summed largests terms first
+%              'ascend'   the terms are summed smallest terms first
+%              'descend': the terms are summed largest  terms first
 %              
 % OUTPUT:
 %   y          an approximation of the sum s.
@@ -28,17 +28,14 @@ function [y, flag]=simple_sum(a,n,precision,direction)
 %                flag=0 signals a certain failure
 %                flag=1 indicates succes.
 %
-% MINIMAL WORKING EXAMPLE:
-% Sum the first n = 1000 terms of the harmonic series using single precision
-% and sum the smallest terms first.
-%
-% n=1000; a=1./linspace(1,n,n); precision='single'; direction='ascend';
-% [s, flag]=simple_sum(a,n,precision,direction);
+% MINIMAL WORKING EXAMPLE: simple_sum_mwe1
+
 
 % Programming: Carl Christian Kjelgaard Mikkelsen (spock@cs.umu.se)
 %   2013-11-XX   Initial version and testing.
 %   2014-11-03   Uniform formating enforced.
-%   2015-11-05   Call sequence and minimal working example added
+%   2015-11-05   Call sequence and minimal working example added.
+%   2018-11-05   Updated documentation.
 
 % Retrieve the number of elements in the array a.
 m=numel(a);
