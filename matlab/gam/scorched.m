@@ -119,12 +119,13 @@ x2=input('Enter x-coordinate of target : '); y2=h(x2);
 plot(x2,y2,'o','MarkerFaceColor', 'r', 'MarkerSize', 10);
 
 % Load predefined shells
-% load shells
+load shells
 
 % Define the shell and the environment. 
 % This is the "standard" gun for 5DV005
-param=struct('mass',10,'cali',0.088,'drag',@(x)0.1879,'atmo',@(x)atmosisa(0),'grav',@(x)9.82);
+param=struct('mass',10,'cali',0.088,'drag',@(x)mcg6(x),'atmo',@(x)atmosisa(x),'grav',@(x)9.82);
 
+% Slight wind blowing from left to right ...
 param.wind=@(t,x)[5,0];
 
 % Select muzzle velocity
@@ -212,7 +213,7 @@ end
 
 % If 6 rounds have been expended without destroying target, then you lose!
 if (dist>rho)
-    fprintf('You have been destroyed by enemy counter battery fire\n'); flag=0;
+    fprintf('You have been destroyed by enemy counter-battery fire\n'); flag=0;
 end
 
 % Wait for the user to press a button
