@@ -14,3 +14,6 @@ precision='single'; direction='ascend';
 
 % Evaluate the sum ...
 [s, flag]=simple_sum(a,n,precision,direction);
+
+% Display the result nicely
+fprintf("Sum s = % 16.14f\n",s);
