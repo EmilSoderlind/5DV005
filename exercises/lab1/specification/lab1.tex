@@ -107,13 +107,15 @@ Always launch {\tt MATLAB} from the directory {\tt 5dv005ht18}. This ensures tha
     \bes
     |s - \hat{s}| \leq E_b, \quad  E_b = \mu u
     \ees
-    where $s$ is the true value of the sum, $\hat{s}$ is computed value of $s$ and $u$ is the unit roundoff. Be mindful of the fact that $u = 2^{-24}$ in single precision and $u = 2^{-53}$ in double precision.
+    where $s$ is the true value of the sum, $\hat{s}$ is computed value of $s$ and $u$ is the unit roundoff, see \cite{mikkelsen2018}, Section 4.3, Algorithm 7. Be mindful of the fact that $u = 2^{-24}$ in single precision and $u = 2^{-53}$ in double precision. 
   \item Edit {\tt my\_l1p3} so that it displays the running error bound right next to the actual error.
   \item Verify that the absolute value of the error is bounded by the running error bound.
   \item Which order of summation is the most accurate?
     \end{enumerate}
   \end{problem}
 
+  \bibliographystyle{plain}
+  \bibliography{../../../lecture-notes/refs}
   
 \end{document}
 
