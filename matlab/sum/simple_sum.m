@@ -36,6 +36,7 @@ function [y, flag]=simple_sum(a,n,precision,direction)
 %   2014-11-03   Uniform formating enforced.
 %   2015-11-05   Call sequence and minimal working example added.
 %   2018-11-05   Updated documentation.
+%   2018-11-06   Minor update to faciliate error calculation
 
 % Retrieve the number of elements in the array a.
 m=numel(a);
@@ -74,17 +75,18 @@ end
 switch lower(precision)
     case 'single'
         % Force calculations to be done in single precision
-        aux=single(aux); s=single(0);
+        aux=single(aux); 
     case 'double'
         % Force calculations to be done in double precision 
-        aux=double(aux); s=double(0);
+        aux=double(aux);
     otherwise
         display('Error: invalid precision specified, aborting!');
         return;
 end
 
 % We are finally ready for the actual computation!
-for i=1:n
+s=aux(1);
+for i=2:n
     s=s+aux(i);
 end
 % At this point an approximation has been computed!
