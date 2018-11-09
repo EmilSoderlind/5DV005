@@ -134,11 +134,11 @@ q = @(x)x.^3 - 6 x.^2 + 12 x - 8
   \end{enumerate}
 \end{problem}
 
-\begin{problem} In this problem you will apply the bisection algorithm to compute a firing solution for a target located at a distance $d$ from the gun.
+\begin{problem} In this problem you will apply the bisection algorithm to compute a firing solution for a target located at a distance $d$ from the gun. 
 \begin{enumerate}
 \item Read through the documentation of the function {\tt bisection} and execute the minimal working example to verify that the code makes sense. 
 \end{enumerate}
-In order to automatically hit a target at coordinates $(d,0)$ we have to set up a suitable function which can be passed to the bisection algorithm. The following steps takes you through this process.
+In order to automatically hit a target at coordinates $(d,0)$ we have to set up a function which can be passed to the bisection algorithm along with pertinant information. The following steps takes you through this process. Rename the script {\tt lab2/script/l2p4.m} to {\tt lab2/work/l2s4.m} and completed it as suggested.
 \begin{enumerate}[resume]
 \item Use the minimal working example of {\tt range\_rkx.m} to initialize a gun and define a range function using those values, i.e.
 \begin{verbatim}
