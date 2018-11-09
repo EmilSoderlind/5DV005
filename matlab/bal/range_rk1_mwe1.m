@@ -12,9 +12,6 @@ param=struct('mass',10,'cali',0.088,'drag',@(x)mcg7(x),'atmo',@(x)atmosisa(x),'g
 % Set the muzzle velocity and the elevation of the gun
 v0=780; theta=45*pi/180; 
 
-% Select the method which will be used to integrate the trajectory
-method='rk2'; 
-
 % Select the basic time step size and the maximum number of time steps
 dt=0.1; maxstep=2000;
 
