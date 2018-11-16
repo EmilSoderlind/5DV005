@@ -1,4 +1,4 @@
-function [x, flag, it, a, b, his, y, reb]=a1f3(p,a0,b0,delta,eps,maxit)
+hfunction [x, flag, it, a, b, his, y, reb]=a1f3(p,a0,b0,delta,eps,maxit)
 
 % A3F3  Finds roots of polynomials using the bisection method
 %
