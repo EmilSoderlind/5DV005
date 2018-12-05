@@ -156,7 +156,7 @@ We must construct accurate approximations of $f(t)$ for all $t \in [x_0,x_n]$ fr
 
   \begin{figure}
     \centering
-    \includegraphics[width=10cm]{MyZeroTheorems.pdf} \caption[Illustration of central theorems]{A illustration of Runge's theorem and the mean value theorem of differentiation.} \label{fig:MyZeroTheorems}
+    \includegraphics[width=10cm]{MyZeroTheorems.pdf} \caption[Illustration of central theorems]{A illustration of Rolle's theorem and the mean value theorem of differentiation.} \label{fig:MyZeroTheorems}
     \end{figure}
 
   
@@ -223,7 +223,7 @@ We must construct accurate approximations of $f(t)$ for all $t \in [x_0,x_n]$ fr
  \ee
  Hermite's approximation of $f : [a,b] \rightarrow \R$ is the polynomial $p : [a,b] \rightarrow \R$ given by
  \be
- p(x)  = f(a) p_0(\phi(x)) + f(b) p_1(\phi(x) + f'(a) (b-a) q_0(\phi(x)) + f'(b) (b-a) q_1(\phi(x))
+ p(x)  = f(a) p_0(\phi(x)) + f(b) p_1(\phi(x)) + f'(a) (b-a) q_0(\phi(x)) + f'(b) (b-a) q_1(\phi(x))
  \ee
  \begin{enumerate}[resume]
  \item Show that Hermite's approximation satisfies
@@ -231,13 +231,13 @@ We must construct accurate approximations of $f(t)$ for all $t \in [x_0,x_n]$ fr
    p(a) = f(a), \quad p(b) = f(b), \quad p'(a) = f'(a), \quad p'(b) = f'(b).
    \ee
  \end{enumerate}
- In short, Hermite's approximation reproduces the values of $f$ and $f'$ at the endpoints of the intervals. If we are given points a list of points
+ In short, Hermite's approximation reproduces the values of $f$ and $f'$ at the endpoints of the intervals. If we are given a list of points
  \bes
- x_0 < x_1 < x_2 < \dots < x_n
+ a= x_0 < x_1 < x_2 < \dots < x_n = b
  \ees
  as well as the function values $f(x_j)$ and the derivatives $f'(x_j)$, then we can approximate $f$ using a piece-wise cubic polynomial $p : [a,b] \rightarrow \R$ given by
  \be
- p(x) = p_j(x), \quad x \in [x_{j-1},x_j],
+\forall x \in [x_{j-1},x_j] \: : \: p(x) = p_j(x)
  \ee
  where $p_j$ is Hermite's approximation of $f$ corresponding to the sub-interval $[x_{j-1}, x_j]$. By design, the function $p$ is differentiable and $p'$ is continuous.
 \begin{enumerate}[resume] 

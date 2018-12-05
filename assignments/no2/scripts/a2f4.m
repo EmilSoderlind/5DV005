@@ -39,7 +39,7 @@ for i=1:m
     % Isolate the endpoints of the interval which contains tau into a, b
     a=s(j); b=s(j+1);
     % Map tau into a point x in [0,1] using the linear transformation
-    % which maps a into 0 and b into 0
+    % which maps a into 0 and b into 1
     x=
     % Compute Hermite's approximation of f(tau) corresponding to the
     % sub-interval [a,b]
