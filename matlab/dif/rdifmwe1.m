@@ -23,4 +23,4 @@ df=@(x)exp(x);
 data=rdif(f,x,D1,p,h0,kmax,df);
 
 % Print the information nicely
-rdifprint(data,p);
+rdifprint(data,p)

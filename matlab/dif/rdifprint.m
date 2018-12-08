@@ -11,7 +11,7 @@ n=size(data,2);
 
 if (n>=4)
     % Select basic headings
-    colheadings={'k','approximation','F_h','Error estimate'};
+    colheadings={'k','Approximation A_h','Fraction F_h','Error estimate E_h'};
     
     % Select column wids
     wids=[6 20 12 20];

@@ -17,7 +17,7 @@ function data=rdif(f,x,D,p,h0,kmax,df)
 %             data(i,2) = D(f,x,h(i))
 %             data(i,3) = Richardson's fraction
 %             data(i,4) = Richardson's error estimate
-%          if the exact derivative is known, then
+%          if the exact derivative supplied as df, then
 %             data(i,5) = exact error
 %             data(i,6) = comparision of error estimate to exact error
 %
@@ -64,8 +64,9 @@ for i=3:kmax
 end
 
 % Compute Richardson's error estimates assuming the order is correct
+factor=2^p-1;
 for i=2:kmax
-    data(i,4)=(data(i,2)-data(i-1,2))/(2^p-1);
+    data(i,4)=(data(i,2)-data(i-1,2))/factor;
 end
 
 if (flag==1)
