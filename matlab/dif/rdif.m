@@ -69,6 +69,7 @@ for i=2:kmax
     data(i,4)=(data(i,2)-data(i-1,2))/factor;
 end
 
+% If possible, then compute the error and compare it to the error estimate
 if (flag==1)
     % Compute the target
     target=df(x);
