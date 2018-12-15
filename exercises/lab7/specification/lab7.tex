@@ -42,7 +42,7 @@ Wednesday, December 19th, (kl. 13.00-16.00), Room MA416-426.
 
 \begin{problem}
   
-    \begin{enumerate} \item Copy script {\tt rode\_mwe1} in {\tt work/l7p1.m} and adapt it to solving the ordinary the initial value problem
+    \begin{enumerate} \item Copy script {\tt rode\_mwe1} in {\tt work/l7p1.m} and adapt it to solving the initial value problem
     \bes
     y'(t) = 1 - y(t)^2, \quad y(0) = 0
     \ees
@@ -52,7 +52,19 @@ Wednesday, December 19th, (kl. 13.00-16.00), Room MA416-426.
   \item Is there good agreement between the error estimates and the true error?
   \end{enumerate}
 \end{problem}  
-    
+
+\begin{remark} The differential equation
+  \be
+  y'(t) = 1 - y(t)^2
+  \ee
+  may appear uninteresting. However, if $y$ is a solution, then $v(t) = a y(bt)$ solves the differential equation
+  \be
+  v'(t) = ab - \frac{b}{a} v(t)^2 = - g + k v(t)^2
+  \ee
+  provided $a = \sqrt{\frac{g}{k}}$ and $b = \sqrt{gk}$. This is the differential equation which corresponds to a rock falling straight down through a homogeneous atmosphere.
+\end{remark}
+
+
 \begin{problem} {\bf Implementing and testing new method}
   \begin{enumerate}
   \item Study the implementation of {\tt rk.m} and at least one of the dependencies, say, {\tt phi4.m} to the point were you can implement the method
