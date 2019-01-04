@@ -1,6 +1,6 @@
 function x=backward(u,f)
 
-% BACKWARD  Backward substitution for an upper triangular linear system
+% BACKWARD Solves nonsingular upper triangular linear system
 %
 % CALL SEQUENCE: x=backward(u,f);
 %

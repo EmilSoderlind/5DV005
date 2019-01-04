@@ -1,6 +1,6 @@
 function x=forward(l,f)
 
-% FORWARD  Forward substitution for a lower triangular linear system
+% FORWARD  Solves unit lower triangular linear system
 %
 % CALL SEQUENCE: x=forward(l,f)
 %
