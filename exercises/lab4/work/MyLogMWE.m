@@ -8,7 +8,7 @@ T = log(x);
 A = MyLog(x);
 
 % Compute relative error
-R = (T-A)./A
+R = (T-A)./A;
 
 % Plot log10 of the absolute value of the relative error
 plot(log10(x),log10(abs(R)));
@@ -17,4 +17,4 @@ plot(log10(x),log10(abs(R)));
 mre=max(abs(R));
 
 % Display mre
-fprintf('Max. absolute value of the relative error = %10.4e\n',mre);
+fprintf('Max. absolute value of the relative error = %10.4e\n', mre);

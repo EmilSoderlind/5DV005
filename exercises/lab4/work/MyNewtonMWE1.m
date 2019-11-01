@@ -1,14 +1,18 @@
+u = 2^-53;
+
+find (rel < 2 * u)
+
 % Define sample points
-x = linspace(2,10,1001);
+x=logspace(-3,3,1001);
 
 % Compute target values
-T = log(x);
+T=sqrt(x);
 
 % Compute approximations
-A = MyLog(x);
+A=MyNewtonSqrt(x);
 
 % Compute relative error
-R = (T-A)./A
+R=(T - A) ./ T;
 
 % Plot log10 of the absolute value of the relative error
 plot(log10(x),log10(abs(R)));
@@ -18,3 +22,4 @@ mre=max(abs(R));
 
 % Display mre
 fprintf('Max. absolute value of the relative error = %10.4e\n',mre);
+

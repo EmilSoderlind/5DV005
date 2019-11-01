@@ -18,7 +18,8 @@ term=ones(size(x));
 it=0;
 
 % Sum terms until the next term is very small relative to the current sum.
-while max(abs(term./y))>tol
+
+while max(abs(term ./ y)) > tol
     % Add the current term to the current approximation
     y=y+term;
     % Increment counter
